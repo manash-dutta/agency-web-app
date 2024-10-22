@@ -221,6 +221,7 @@ html {
   font-size: 4rem;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
   color: #fff;
   background-color: rgba(0 0 0 / 60%);
   width: 30%;
