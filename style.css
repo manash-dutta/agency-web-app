@@ -29,6 +29,7 @@ html {
   width: 15rem;
   height: 0.2rem;
   background-color: #ddd;
+  z-index: 10;
 }
 
 /* Navbar */
@@ -38,7 +39,7 @@ html {
   background-color: rgba(0 0 0 / 90%);
   position: fixed;
   top: -8rem;
-  z-index: 10;
+  z-index: 100;
   padding: 3rem;
   transition: height 0.5s ease-in-out;
   animation: animateNavbar 0.9s 0.5s forwards;
@@ -117,7 +118,7 @@ html {
   position: fixed;
   top: 2rem;
   right: 4rem;
-  z-index: 11;
+  z-index: 110;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -157,6 +158,9 @@ html {
   background: url(assets/dark-bg.jpeg) no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner {
@@ -301,16 +305,29 @@ html {
   background-color: #222020;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   padding-inline: 10rem;
   position: relative;
+}
+
+.about-us-heading {
+  display: flex;
+  align-items: center;
+}
+
+.about-us-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
 
 .video-container {
   height: 50rem;
   width: 100rem;
-  position: absolute;
+  /* position: absolute;
   top: 5rem;
-  right: 15rem;
+  right: 15rem; */
+  position: relative;
   box-shadow: 3rem 3rem 3rem rgba(0 0 0 / 70%);
   overflow: hidden;
 }
@@ -368,9 +385,9 @@ html {
 }
 
 .about-us-para {
-  position: absolute;
+  /* position: absolute;
   bottom: 8rem;
-  right: 15rem;
+  right: 15rem; */
   width: 100rem;
   font-size: 2rem;
   color: #ddd;
@@ -405,20 +422,24 @@ html {
   display: flex;
   align-items: center;
   padding-left: 10rem;
+  overflow: hidden;
 }
 
 .pricing-cards-container {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  padding: 5rem;
 }
 
 .pricing-card {
-  width: 28rem;
-  height: 45rem;
+  width: 28rem !important;
+  height: 45rem !important;
   background-color: #181b1d;
   border-radius: 2rem;
   box-shadow: 2rem 2rem 6rem rgba(0 0 0 / 70%);
+  position: relative;
+  /* transform: rotateY(180deg); */
 }
 
 .pricing-card-front {
@@ -428,6 +449,11 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  background-color: #181b1d;
+  backface-visibility: hidden;
+  border-radius: 2rem;
 }
 
 .pricing-card-heading {
@@ -561,4 +587,304 @@ html {
 .pricing-card-back a {
   font-size: 2.5rem;
   color: #fff;
+}
+
+/* Contact Us Section */
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #171718;
+  display: flex;
+  align-items: center;
+  padding-inline: 10rem;
+}
+
+.contact-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 8rem;
+}
+
+.contact-details div {
+  /* width: 25rem; */
+  text-align: center;
+  margin-block: 4rem;
+}
+
+.contact-details i {
+  font-size: 5rem;
+  color: #7a1010;
+}
+
+.contact-details h3 {
+  font-family: "MADE Soulmaze", sans-serif;
+  margin-block: 2rem;
+  font-size: 2.5rem;
+  color: #ccc;
+}
+
+.contact-details p {
+  font-size: 1.6rem;
+  color: #aaa;
+}
+
+.contact-container h1 {
+  font-size: 4rem;
+  color: #ccc;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  max-width: 70rem;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1.5rem;
+  background-color: #444;
+  color: #eee;
+  border: none;
+  font-family: Oswald, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.contact-form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 15rem;
+  min-height: 5.5rem;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #7a1010;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: filter 0.3s ease-in-out;
+}
+
+.contact-form input[type="submit"]:hover {
+  filter: brightness(90%);
+}
+
+.contact-form input[type="submit"]:active {
+  transform: translateY(0.2rem);
+}
+
+/* Footer Section */
+.footer {
+  width: 100%;
+  height: 12rem;
+  background-color: #202122;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10rem;
+}
+
+.footer-nav a {
+  font-family: "MADE Soulmaze", sans-serif;
+  font-size: 2rem;
+  color: #ccc;
+  letter-spacing: 0.1rem;
+  margin-right: 3rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+  color: #862323;
+}
+
+.copyright {
+  font-size: 2rem;
+  color: #ddd;
+}
+
+/* Adding Responsiveness */
+@media (max-width: 1800px) {
+  html {
+    font-size: 9.5px;
+  }
+
+  .pricing .section-heading-line {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 1650px) {
+  .video-container {
+    width: 85rem;
+    height: 40rem;
+  }
+
+  .about-us-para {
+    width: 85rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .section-heading-line {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 7px;
+  }
+
+  .banner-heading span {
+    font-size: 10rem;
+  }
+
+  .banner-para {
+    font-size: 3rem;
+    width: 45rem;
+  }
+
+  .about-us,
+  .pricing,
+  .contact {
+    flex-direction: column;
+    padding-block: 7rem;
+  }
+
+  .pricing {
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  .section-heading {
+    font-size: 7rem;
+  }
+
+  .fa-quote-left,
+  .fa-quote-right {
+    font-size: 3rem;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 40%;
+  }
+
+  .banner {
+    top: 25%;
+  }
+
+  .banner-heading {
+    height: 15rem;
+  }
+
+  .banner-heading span {
+    font-size: 8rem;
+  }
+
+  .footer-nav {
+    font-size: 1.8rem;
+  }
+
+  .footer-nav a {
+    margin-right: 2rem;
+  }
+
+  .copyright {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 35%;
+  }
+
+  .contact-details div {
+    margin: 3rem 2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 30%;
+  }
+
+  .banner-heading span {
+    font-size: 4.5rem;
+    letter-spacing: 2rem;
+  }
+
+  @keyframes animateHeading {
+    0% {
+      transform: translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 2rem;
+    }
+    3% {
+      transform: translateZ(0);
+      opacity: 1;
+      letter-spacing: 1rem;
+    }
+    25% {
+      transform: translateZ(0);
+      opacity: 1;
+      letter-spacing: 1rem;
+    }
+    28% {
+      transform: translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 2rem;
+    }
+    100% {
+      transform: translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 2rem;
+    }
+  }
+
+  .video-container {
+    width: 95vw;
+  }
+
+  .about-us-para {
+    width: 95vw;
+  }
+
+  .contact-details {
+    width: 100vw;
+    padding-inline: 5rem;
+  }
+
+  .contact-form {
+    width: 90vw;
+  }
+
+  .footer-nav a {
+    margin-right: 1rem;
+    font-size: 1.8rem;
+  }
 }

@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Business Agency</title>
   </head>
   <body>
@@ -20,7 +24,7 @@
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#blog" class="nav-link">Blog</a>
+        <!-- <a href="#blog" class="nav-link">Blog</a> -->
         <a href="#contact" class="nav-link">Contact</a>
       </div>
     </nav>
@@ -52,30 +56,35 @@
 
       <!-- About Us Section -->
       <section class="about-us" id="about">
-        <h1 class="section-heading">About Us</h1>
-        <div class="section-heading-line"></div>
-        <div class="video-container">
-          <video src="assets/about-us-video.mp4" class="video"></video>
-          <div class="controls">
-            <div class="video-bar-container">
-              <div class="video-bar"></div>
-            </div>
-            <div class="buttons">
-              <button>
-                <i class="far fa-play-circle"></i>
-              </button>
+        <div class="about-us-heading">
+          <h1 class="section-heading">About Us</h1>
+          <div class="section-heading-line"></div>
+        </div>
+
+        <div class="about-us-body">
+          <div class="video-container">
+            <video src="assets/about-us-video.mp4" class="video"></video>
+            <div class="controls">
+              <div class="video-bar-container">
+                <div class="video-bar"></div>
+              </div>
+              <div class="buttons">
+                <button>
+                  <i class="far fa-play-circle"></i>
+                </button>
+              </div>
             </div>
           </div>
+          <p class="about-us-para">
+            <i class="fas fa-quote-left"></i>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            aperiam accusantium nam veritatis repellendus incidunt doloremque
+            maxime voluptates. Neque iure ratione blanditiis sequi delectus
+            cupiditate eveniet soluta aliquam amet alias ea necessitatibus ut,
+            dicta fugit mollitia beatae nam reprehenderit officia.
+            <i class="fas fa-quote-right"></i>
+          </p>
         </div>
-        <p class="about-us-para">
-          <i class="fas fa-quote-left"></i>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, aperiam
-          accusantium nam veritatis repellendus incidunt doloremque maxime
-          voluptates. Neque iure ratione blanditiis sequi delectus cupiditate
-          eveniet soluta aliquam amet alias ea necessitatibus ut, dicta fugit
-          mollitia beatae nam reprehenderit officia.
-          <i class="fas fa-quote-right"></i>
-        </p>
       </section>
       <!-- End of About Us Section -->
 
@@ -83,7 +92,7 @@
       <section class="pricing" id="pricing">
         <h1 class="section-heading">Pricing</h1>
         <div class="section-heading-line"></div>
-        <div class="swiper">
+        <div class="swiper-container">
           <div class="pricing-cards-container swiper-wrapper">
             <div class="pricing-card swiper-slide">
               <div class="pricing-card-front">
@@ -225,8 +234,59 @@
         </div>
       </section>
       <!-- End of Pricing Section -->
+
+      <!-- Contact Us Section -->
+      <section class="contact" id="contact">
+        <div class="section-heading">Contact</div>
+        <div class="section-heading-line"></div>
+        <div class="contact-container">
+          <div class="contact-details">
+            <div class="phone">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Phone</h3>
+              <p>+91 98765 43210</p>
+              <p>+91 01234 56789</p>
+            </div>
+            <div class="address">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Address</h3>
+              <p>Main Street #123</p>
+              <p>Wall Street #123</p>
+            </div>
+            <div class="email">
+              <i class="far fa-envelope"></i>
+              <h3>Email</h3>
+              <p>support@gmail.com</p>
+              <p>sales@gmail.com</p>
+            </div>
+          </div>
+          <h1>Get in Touch</h1>
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" />
+          </form>
+        </div>
+      </section>
+      <!-- End of Contact Us Section -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="copyright">
+          Copyright &copy; Manash Dutta All Rights Reserved
+        </p>
+      </footer>
+      <!-- End of Footer -->
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
